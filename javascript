@@ -4,7 +4,7 @@ $(document).ready(function() {
     const textarea = $('#text_editor_textarea');
 //en cas d'erreur
     if (replaceButton.length === 0 || textarea.length === 0) {
-        console.error("Le bouton ou la zone de texte n'ont pas été trouvés.");
+        console.error("Zone de texte non trouvée.");
         return;
     }
 
@@ -40,7 +40,7 @@ $(document).ready(function() {
         alert("Texte transformé: " + newText);
 
         // Message du presse papier, possibilité de le personnaliser
-        if (confirm("Souhaitez-vous copier le texte transformé dans le presse-papiers ?")) {
+        if (confirm("Souhaitez-vous copier le texte en inclusif dans le presse-papiers ?")) {
             navigator.clipboard.writeText(newText).then(function() {
                 alert("Texte copié dans le presse-papiers !");
             }, function(err) {
